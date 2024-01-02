@@ -1,0 +1,22 @@
+<form (ngSubmit)="submitForm()">
+  <label for="Amount">Amount:</label>
+  <input type="text" id="Amount" name="Amount" [(ngModel)]="formData.Amount" required>
+  
+  <label for="CardAccountNumber">CardAccountNumber:</label>
+  <input type="CardAccountNumber" id="CardAccountNumber" name="CardAccountNumber" [(ngModel)]="formData.CardAccountNumber" required>
+      
+<label for="MessageId">MessageId:</label>
+  <input type="MessageId" id="MessageId" name="MessageId" [(ngModel)]="formData.MessageId" required>
+
+<label for="Status">Status:</label>
+  <input type="text" id="Status" name="Status" [(ngModel)]="formData.Status" required>
+      
+  <label for="TransactionId">TransactionId:</label>
+  <input type="TransactionId" id="TransactionId" name="TransactionId" [(ngModel)]="formData.TransactionId" required>
+      
+<label for="TransactionType">TransactionType:</label>
+  <input type="TransactionType" id="TransactionType" name="TransactionType" [(ngModel)]="formData.TransactionType" required>
+
+  <button type="submit">Submit</button>
+</form>
+{{TotalApiData|json}}

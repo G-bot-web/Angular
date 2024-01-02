@@ -1,0 +1,23 @@
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+        <mat-list role="list">
+            @for (service of typesOfService; track service) {
+                <mat-list-item [class.active]="selectedTab === service" (click)="SelectedTabx(service)" > {{service}}</mat-list-item>
+                <mat-divider></mat-divider>
+              }
+          </mat-list>
+ 
+    </mat-drawer>
+    <mat-drawer-content>
+        <div [ngSwitch]="selectedTab">
+            <div *ngSwitchCase="'New FI On-Boarding'"><app-new-fi-onboarding></app-new-fi-onboarding></div>
+            <div *ngSwitchCase="'Transaction'">Transaction</div>
+            <div *ngSwitchCase="'Stastics'">Stastics</div>
+            <div *ngSwitchCase="'AccountCapability'"><app-account-capability></app-account-capability></div>
+            <div *ngSwitchCase="'Splunk Monitor'">Splunk Monitor 2</div>
+            <div *ngSwitchDefault><app-account-capability></app-account-capability></div>
+          </div>
+    </mat-drawer-content>
+      
+  </mat-drawer-container>
+  

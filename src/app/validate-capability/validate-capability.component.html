@@ -1,0 +1,40 @@
+<div class="stepperform">
+    <mat-stepper linear #stepper>
+        <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+            <form [formGroup]="firstFormGroup" (ngSubmit)="onSubmit()">
+                <ng-template matStepLabel>Provide the Below Details</ng-template>
+                <mat-form-field>
+                    <mat-label>RTN</mat-label>
+                    <input matInput formControlName="firstCtrl" placeholder="RTN" [(ngModel)]="formData.RTN" required>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Account Number</mat-label>
+                    <input matInput formControlName="firstCtrl" placeholder="Account Number" [(ngModel)]="formData.AccountNumber" required>
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        
+        <mat-step>
+            <ng-template matStepLabel>Status</ng-template>
+            <p>Capability status is :</p>
+            <h1>{{capabilityResult.status}}</h1>
+            <mat-card >
+                <mat-card-header>
+                    <mat-card-title>Account Details </mat-card-title>
+                    <mat-card-subtitle>RTN: {{capabilityResult.RTN}}</mat-card-subtitle>
+                    <mat-card-subtitle>Account Number: {{capabilityResult.AccountNumber}}</mat-card-subtitle>
+                    <mat-card-subtitle>Account Capability: {{capabilityResult.capability}}</mat-card-subtitle>
+                    <mat-card-subtitle>Account Type: {{capabilityResult.status}}</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button (click)="stepper.reset()">Reset</button>
+            </div>
+        </mat-step>
+    </mat-stepper>
+
+</div>

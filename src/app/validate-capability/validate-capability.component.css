@@ -1,0 +1,16 @@
+.mat-stepper-horizontal {
+    margin-top: 8px;
+  }
+  
+  .mat-mdc-form-field {
+    margin-top: 16px;
+  }
+  .stepperform{
+    margin: 10px;
+  }
+  mat-form-field{
+    margin: 40px!important;
+  }
+  mat-card-header{
+    margin: 20px;
+  }

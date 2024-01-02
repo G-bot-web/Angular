@@ -1,0 +1,53 @@
+<div [ngSwitch]="selectedTab">
+    <div *ngSwitchCase="'Add Account Capability'"><app-add-capability></app-add-capability></div>
+    <div *ngSwitchCase="'Validate Capability'"><app-validate-capability></app-validate-capability></div>
+    <div *ngSwitchCase="'Edit Capability'">Edit Capability</div>
+    <div *ngSwitchCase="'List All Capability'">List All Capability</div>
+    <div *ngSwitchDefault>
+        <div class="main">
+            <div class="headding">
+                <h1>Multiple Account Capability(MAC)</h1>
+                <h3>Choose an action to proceed!</h3>
+            </div>
+            <div class="content">
+                <mat-card (click)="SelectedTabx('Add Account Capability')">
+                    <mat-card-header>
+                        <mat-card-title>Add Account Capability</mat-card-title>
+                        <mat-card-subtitle>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis
+                            veritatis a quas, animi deserunt minima saepe atque sed recusandae, aliquid doloribus
+                            accusantium officiis cupiditate beatae eum nemo illo magnam aperiam.</mat-card-subtitle>
+                    </mat-card-header>
+                </mat-card>
+                <br>
+                <mat-card (click)="SelectedTabx('Validate Capability')">
+                    <mat-card-header>
+                        <mat-card-title>Validate Capability</mat-card-title>
+                        <mat-card-subtitle>Lorelo eius recusandae adipisci omnis laboriosam voluptatibus corporis odio,
+                            cumque, culpa voluptatem ipsum blanditiis? Repudiandae, quisquam vero provident
+                            reprehenderit est exercitationemsdfgsdfghgdsadfghfsddfghfdsdfgsdfg.</mat-card-subtitle>
+                    </mat-card-header>
+                </mat-card>
+
+            </div>
+            <div class="content2">
+                <mat-card (click)="SelectedTabx('Edit Capability')">
+                    <mat-card-header>
+                        <mat-card-title>Edit Capability</mat-card-title>
+                        <mat-card-subtitle>Lorem ipsum dolor sit amet consectetur atis, ratione molestiae cupiditate
+                            officiis exercitationem, repudiandae molestias obcaecati id at tempora laboriosam fugiat
+                            dolorem consequuntur praesentium sapiente architect;pppo quae!</mat-card-subtitle>
+                    </mat-card-header>
+                </mat-card>
+                <br>
+                <mat-card (click)="SelectedTabx('List All Capability')">
+                    <mat-card-header>
+                        <mat-card-title>List All Capability</mat-card-title>
+                        <mat-card-subtitle>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit suscipit
+                            inventore omnis hic dolore sapiente, ratione dolorum voluptatum quam et magni distinctio
+                            quae, iste ducimus consequatur aperiam molestias reiciendis dae!</mat-card-subtitle>
+                    </mat-card-header>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

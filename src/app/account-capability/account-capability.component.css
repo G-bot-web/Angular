@@ -1,0 +1,29 @@
+h1{
+    text-align: center;
+    margin-top: 25px;
+}
+.content {
+    display: flex;
+    margin: 100px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+.mat-mdc-card{
+    flex-grow: 0.4;
+    margin: 20px;
+}
+h3{
+    margin-left: 120px;
+}
+
+.content2 {
+    display: flex;
+    margin: 100px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.mat-mdc-card:hover{
+    background: #d1d3d4!important;
+}
